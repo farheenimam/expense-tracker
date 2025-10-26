@@ -1,8 +1,6 @@
 <?php
 include 'db.php';
 
-$success_message = "";
-$error_message = "";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
     $name = $_POST['username'];

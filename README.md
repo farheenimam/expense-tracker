@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Expense Tracker Web Application
 
 ## Table of Contents
@@ -631,6 +630,6 @@ if ($result->num_rows > 0) {
 - Budget planning features
 
 ---
-=======
-# expense-tracker
->>>>>>> 32007c1fe8e73434c566ef8e7bfe478d460a0767
+
+
+

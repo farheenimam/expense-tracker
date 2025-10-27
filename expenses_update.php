@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           
         <div class="form-group">
           <label for="description">Description:</label>
-          <input type="text" id="description" name="description" pattern="^\S{5,50}$" title="Only strings and max 50 characters" value="<?php echo $description; ?>" placeholder="Enter description" />
+          <input type="text" id="description" name="description" pattern="^[A-Za-z0-9 ]{3,50}$" title="Only strings and max 50 characters" value="<?php echo $description; ?>" placeholder="Enter description" />
         </div>
 
         <div class="form-group">

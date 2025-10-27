@@ -8,7 +8,7 @@
 
 /* Navigation */
 .navbar {
-  background: #333;
+  background: #000000;
   padding: 15px 0;
 }
 
@@ -19,12 +19,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
 }
 
 .nav-links {
@@ -39,12 +33,12 @@
 }
 
 .nav-links a:hover {
-  color: #ccc;
+  color: #db45f6;
 }
 
 /* Body */
 body {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #0c0b0cff, rgb(45, 3, 60));
   min-height: 100vh;
   color: rgba(255, 255, 255, 0.875);
 }
@@ -58,7 +52,6 @@ body {
   font-size: 36px;
   margin-bottom: 10px;
 }
-
 .content p {
   font-size: 18px;
 }
@@ -117,7 +110,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #8b5cf6;
+  outline: 2px solid #780c9fff;
 }
 
 .form-submit-btn,
@@ -200,7 +193,7 @@ th {
 
 /* Login/Signup Pages */
 .auth-body {
-  background: white;
+  background: rgb(17, 15, 15);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,7 +203,7 @@ th {
   width: 100%;
   max-width: 400px;
   padding: 40px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #000000, rgb(45, 3, 60));
   color: white;
   border-radius: 10px;
   text-align: center;
@@ -322,3 +315,4 @@ th {
 .clear-btn:hover {
   background: #4b5563;
 }
+                                            

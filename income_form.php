@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       <div class="form-group">
         <label for="source">Source: (max 15 characters)</label>
-        <input type="text" id="source" name="source"  title="Only strings and max 15 characters" pattern="^\S{5, 15}$" laceholder="e.g. Salary" />
+        <input type="text" id="source" name="source"  title="Only strings and max 15 characters" pattern="^\S{5,15}$" placeholder="e.g. Salary" />
       </div>
 
       <div class="form-group">
@@ -61,8 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
       <button type="submit" class="form-submit-btn">Add Income</button>
     </form>
-  </section>
- 
+ </section>
 </body>
 </html>
 

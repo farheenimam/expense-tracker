@@ -4,9 +4,9 @@ include 'db.php';
 // if the request is of get then display all the records
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $id = $_GET['id'];
-  $user_id = $_GET['user_id'];
+  $i_id = $_GET['i_id'];
 
-  $sql = "SELECT * FROM income where user_id='$user_id' and i_id='$id'";
+  $sql = "SELECT * FROM income where user_id='$id' and i_id='$i_id'";
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
@@ -24,8 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 // if the user wants to update the record
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user_id = $_POST['user_id'];
-    $id = $_POST['id'];
+    $user_id = $_POST['id'];
+    $id = $_POST['i_id'];
     $amount = $_POST['amount'];
     $source = $_POST['source'];
     $date = $_POST['date'];
@@ -69,8 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="amount">Amount:</label>
         <input type="number" id="amount" name="amount" value="<?php echo $amount; ?>" step="any" min="1" max="999999999" placeholder="Enter amount" required />
       </div>
-      <input type="hidden" name="user_id" value="<?php echo $user_id; ?>" />
       <input type="hidden" name="id" value="<?php echo $id; ?>" />
+      <input type="hidden" name="i_id" value="<?php echo $i_id; ?>" />
         
       <div class="form-group">
         <label for="source">Source: (max 15 characters)</label>

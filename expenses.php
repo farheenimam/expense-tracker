@@ -60,8 +60,8 @@ $conn->close();
                 echo "<tr><td>" .$row['amount']. "</td>
                 <td>".$row['description']."</td>
                 <td>".$row['category']."</td>
-                <td><a href='expenses_delete.php?id=" .$row['e_id']. "&user_id=" .$row['user_id']."'><button class=\"delete-btn\">Delete</button></a>
-                <a href='expenses_update.php?id=" .$row['e_id']. "&user_id=" .$row['user_id']."'><button class=\"edit-btn\">View Detail</button></a></td>
+                <td><a href='expenses_delete.php?id=" .$row['user_id']. "&e_id=" .$row['e_id']."'><button class=\"delete-btn\">Delete</button></a>
+                <a href='expenses_update.php?id=" .$row['user_id']. "&e_id=" .$row['e_id']."'><button class=\"edit-btn\">View Detail</button></a></td>
                 </tr>";
                 $total += $row['amount'];
             }
@@ -75,9 +75,11 @@ $conn->close();
         }
           ?>
         </tbody>
+        
       </table>
-      <strong><p>Total expenses: <?php echo $total;?></p></strong>
-    </section>
+      <div class="profile-info">
+     <p> Total expenses: <?php echo $total;?></p>
+    </div>
     </section>
 </section>
   </main>

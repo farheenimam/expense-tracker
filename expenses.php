@@ -76,10 +76,10 @@ $conn->close();
         </tbody>
         
       </table>
-      <div class="profile-info">
+    </section>
+    <div class="profile-info">
      <p> Total expenses: <?php echo $total;?></p>
     </div>
-    </section>
 </section>
 
 </body>

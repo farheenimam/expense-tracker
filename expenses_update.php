@@ -60,10 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <p>Use the navigation bar to view or add records.</p>
   </div>
 
-  <main>
     <section class="form-section">
       <h2>View/Update Expense</h2>
-      <form id="expense-form" action="expenses_update.php" method="post">
+      <form action="expenses_update.php" method="post">
         
         <div class="form-group">
           <label for="amount">Amount:</label>
@@ -90,6 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <button type="submit" class="form-submit-btn">Update Expense</button>
       </form>
     </section>
-  </main>
+
 </body>
 </html>

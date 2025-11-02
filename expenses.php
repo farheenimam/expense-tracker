@@ -1,7 +1,7 @@
 <?php
 // We will list the expenses of all the users here
 include 'db.php';
-
+include 'navbar.php';
 $id = $_GET['id'];
 $search = "";
 
@@ -28,7 +28,6 @@ $conn->close();
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <?php include 'navbar.php'; ?>
 
 <section class="form-section">
   <section class="table-section">
@@ -82,7 +81,7 @@ $conn->close();
     </div>
     </section>
 </section>
-  </main>
+
 </body>
 </html>
  

@@ -76,10 +76,9 @@ $conn->close();
       </table>
     </section>
       <div class="profile-info">
-     <p> Total income: <?php echo $total;?></p>
+     <strong><p> Total income: <?php echo $total;?></p></strong>
     </div>
 </section>
-  </main>
 </body>
 </html>
  

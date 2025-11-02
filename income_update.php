@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-
+include 'navbar.php';
 // if the request is of get then display all the records
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $id = $_GET['id'];
@@ -51,8 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <?php 
-  ?>
+
 
   <div class="content">
     <h1>Welcome to Your Expense Tracker</h1>
@@ -61,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   <section class="form-section">
     <h2>Update Income</h2>
-    <form id="income-form" action="income_update.php" method="post">
+    <form action="income_update.php" method="post">
       
       <div class="form-group">
         <label for="amount">Amount:</label>

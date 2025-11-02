@@ -60,7 +60,7 @@ main {
   max-width: 800px;
   margin: 20px auto;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background:rgba(168, 52, 195, 0.132);
   border-radius: 10px;
 }
 
@@ -253,13 +253,13 @@ th {
 
 /* Profile page */
 .profile-info {
-  background: rgba(255, 255, 255, 0.1);
+  background:rgba(174, 15, 209, 0.132);
   padding: 30px;
   border-radius: 10px;
 }
 
 .profile-info p {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(194, 191, 195, 0.1);
   padding: 10px;
   border-radius: 5px;
   margin-top: 5px;

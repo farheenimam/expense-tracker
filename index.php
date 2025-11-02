@@ -47,9 +47,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
         <h1>Create Account</h1>
         <p>Join us by creating a new account.</p>
         <form action="index.php" method="POST" class="auth-form">
-            <input type="text" name="username" pattern="^[a-zA-Z ]{3,20}$" title="Username: 3-20 characters, letters and spaces only" placeholder="Username (3-20 characters)" required>
-            <input type="email" name="email" pattern="^\S{5,50}$" title="Enter valid email" placeholder="Email" required>
-            <input type="password" name="password" pattern="^\S{8,20}$" title="Password: 8-20 characters, no spaces" placeholder="Password (8-20 characters)" required>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" pattern="^[a-zA-Z ]{3,20}$" title="Username: 3-20 characters, letters and spaces only" placeholder="Username (3-20 characters)" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern="^\S{5,50}$" title="Enter valid email" placeholder="Email" required>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" pattern="^\S{8,20}$" title="Password: 8-20 characters, no spaces" placeholder="Password (8-20 characters)" required>
             <button type="submit">Sign Up</button>
         </form>
         <p class="auth-switch">Already have an account? <a href="login.php">Login</a></p>

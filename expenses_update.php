@@ -1,6 +1,7 @@
 <?php
 include 'db.php';
 include 'navbar.php';
+
 // if the request is of get then display all the records
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $e_id = $_GET['e_id'];

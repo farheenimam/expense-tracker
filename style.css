@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  color: white;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
@@ -40,12 +41,12 @@
 body {
   background: linear-gradient(135deg, #0c0b0cff, rgb(45, 3, 60));
   min-height: 100vh;
-  color: rgba(255, 255, 255, 0.875);
 }
 
 .content {
   text-align: center;
   padding: 40px 20px;
+  color: white;
 }
 
 .content h1 {
@@ -206,7 +207,7 @@ th {
   background: linear-gradient(135deg, #000000, rgb(45, 3, 60));
   color: white;
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .auth-container h1 {

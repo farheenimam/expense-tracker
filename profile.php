@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                     if ($total < 0) {
                         echo "Your balance is negative '" . $total . "'. You’ve spent more than your income!";
                     } else {
-                        echo "Your balance: $" . $total;
+                        echo $total;
                     }                 
                    ?></p>
                 </div>

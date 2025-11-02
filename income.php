@@ -2,6 +2,7 @@
 // We will list the income of all the users here
 include 'db.php';
 include 'navbar.php';
+
 $id = $_GET['id'];
 $search = "";
 
@@ -36,7 +37,7 @@ $conn->close();
       <!-- Search Bar -->
       <form method="GET" action="income.php" class="search-form">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <input type="text" name="search" placeholder="Search by source..." value="<?php echo $search; ?>" class="search-input">
+        <input type="text" name="search" placeholder="Search by sorce..." pattern="^[A-Za-z\s]{5, 15}$" value="<?php echo $search; ?>" class="search-input">
         <button type="submit" class="search-btn">Search</button>
         <a href="income.php?id=<?php echo $id; ?>"><button type="button" class="clear-btn">Clear</button></a>
       </form>
@@ -63,7 +64,7 @@ $conn->close();
                 </tr>";
                 $total += $row['amount'];
             }
-        }
+          }
         else {
             if ($search != "") {
                 echo "<tr><td colspan='4'>No income found for '$search'</td></tr>";

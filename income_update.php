@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
       <div class="form-group">
         <label for="source">Source: (max 15 characters)</label>
-        <input type="text" id="source" name="source" pattern="^[A-Za-z]{5,15}$" title="Only strings and max 15 characters" value="<?php echo $source; ?>" placeholder="e.g. Salary" />
+        <input type="text" id="source" name="source" pattern="^[A-Za-z]{5,15}$" title="Only strings and max 15 characters and min 5 characters" value="<?php echo $source; ?>" placeholder="e.g. Salary" />
       </div>
 
       <div class="form-group">

@@ -2,6 +2,10 @@
 include 'db.php';
 include 'navbar.php'; 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    if (!isset($_GET['id'])){
+        header("Location: index.php");
+        exit();
+    }
     $id = $_GET['id'];
     
     $sql = "SELECT name, email FROM users WHERE Id='$id'";

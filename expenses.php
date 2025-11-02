@@ -2,6 +2,12 @@
 // We will list the expenses of all the users here
 include 'db.php';
 include 'navbar.php';
+
+if (!isset($_GET['id'])){
+  header("Location: index.php");
+  exit();
+}
+
 $id = $_GET['id'];
 $search = "";
 

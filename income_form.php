@@ -3,6 +3,10 @@ include 'db.php';
 include 'navbar.php'; 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $id = $_GET['id'];
+  if (!isset($_GET['id'])){
+  header("Location: index.php");
+  exit();
+}
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -52,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       <div class="form-group">
         <label for="source">Source: (max 15 characters)</label>
-        <input type="text" id="source" name="source"  title="Only strings and max 15 characters" pattern="^[A-Za-z\s]{5, 15}$" placeholder="e.g. Salary" />
+        <input type="text" id="source" name="source"  title="Only strings and max 15 characters" pattern="^[A-Za-z]{5,15}$" placeholder="e.g. Salary" />
       </div>
 
       <div class="form-group">

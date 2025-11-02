@@ -1,7 +1,12 @@
 <?php
 include 'db.php';
 include 'navbar.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+  if (!isset($_GET['id'])){
+  header("Location: index.php");
+  exit();
+}
   $id = $_GET['id'];
 }
 
@@ -53,12 +58,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
       <div class="form-group">
         <label for="description">Description (max 50 characters):</label>
-        <input type="text" id="description" name="description" pattern="^[A-Za-z0-9 ]{3,50}$" title="Letters, numbers, and spaces only (3-50 characters)" placeholder="Enter description" required/>
+        <input type="text" id="description" name="description" pattern="^[A-Za-z ]{3,50}$" title="Letters, numbers, and spaces only (3-50 characters)" placeholder="Enter description" required/>
       </div>
 
       <div class="form-group">
         <label for="category">Category (max 15 characters):</label>
-        <input type="text" id="category" name="category" pattern="^\S{2,15}$" title="Only strings and max 15 characters" placeholder="Enter category" required />
+        <input type="text" id="category" name="category" pattern="^\S[A-Za-z]{2,15}$" title="Only strings and max 15 characters" placeholder="Enter category" required />
       </div>
 
       <div class="form-group">

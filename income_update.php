@@ -3,6 +3,10 @@ include 'db.php';
 include 'navbar.php';
 // if the request is of get then display all the records
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+  if (!isset($_GET['id'])){
+  header("Location: index.php");
+  exit();
+}
   $id = $_GET['id'];
   $i_id = $_GET['i_id'];
 
@@ -71,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
       <div class="form-group">
         <label for="source">Source: (max 15 characters)</label>
-        <input type="text" id="source" name="source" pattern="^\S{5, 15}$" title="Only strings and max 15 characters" value="<?php echo $source; ?>" placeholder="e.g. Salary" />
+        <input type="text" id="source" name="source" pattern="^[A-Za-z]{5,15}$" title="Only strings and max 15 characters" value="<?php echo $source; ?>" placeholder="e.g. Salary" />
       </div>
 
       <div class="form-group">

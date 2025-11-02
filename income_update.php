@@ -52,8 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
   <?php 
-  include 'db.php';
-  include 'navbar.php';
   ?>
 
   <div class="content">

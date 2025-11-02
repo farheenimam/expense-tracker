@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-
+include 'navbar.php'; 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $id = $_GET['id'];
 }
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <?php include 'navbar.php'; ?>
+  
 
   <div class="content">
     <h1>Welcome to Your Expense Tracker</h1>
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       <div class="form-group">
         <label for="source">Source: (max 15 characters)</label>
-        <input type="text" id="source" name="source"  title="Only strings and max 15 characters" pattern="^\S{5,15}$" placeholder="e.g. Salary" />
+        <input type="text" id="source" name="source"  title="Only strings and max 15 characters" pattern="^[A-Za-z\s]{5, 15}$" placeholder="e.g. Salary" />
       </div>
 
       <div class="form-group">

@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-
+include 'navbar.php';
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $id = $_GET['id'];
 }
@@ -35,10 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <?php 
-  include 'db.php';
-  include 'navbar.php';
-  ?>
 
   <div class="content">
     <h1>Welcome to Your Expense Tracker</h1>

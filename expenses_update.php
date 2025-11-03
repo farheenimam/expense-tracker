@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class="form-group">
           <label for="category">Category:</label>
-          <input type="text" id="category" name="category" pattern="^\S{2,15}$"  title="Only strings and max 15 characters" value="<?php echo $category; ?>" placeholder="Enter category" required/>
+          <input type="text" id="category" name="category"  pattern="^\S[A-Za-z]{2,15}$"  title="Only strings and max 15 characters" value="<?php echo $category; ?>" placeholder="Enter category" required/>
         </div>
 
         <div class="form-group">

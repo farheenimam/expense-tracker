@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
       <div class="form-group">
         <label for="description">Description (max 50 characters):</label>
-        <input type="text" id="description" name="description" pattern="^[A-Za-z ]{3,50}$" title="Letters, numbers, and spaces only (3-50 characters)" placeholder="Enter description" required/>
+        <input type="text" id="description" name="description" pattern="^\S[A-Za-z ]{3,50}$" title="Letters, numbers, and spaces only (3-50 characters)" placeholder="Enter description" required/>
       </div>
 
       <div class="form-group">

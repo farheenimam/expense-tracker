@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: expenses.php?id=$user_id");
+        header("Location: expenses.php?id=$id");
         exit();
     } else {
         echo "Error: ". $sql. "<br>". $conn->error;
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           
         <div class="form-group">
           <label for="description">Description:</label>
-          <input type="text" id="description" name="description" pattern="^[A-Za-z ]{3,50}$" title="Only strings and max 50 characters" value="<?php echo $description; ?>" placeholder="Enter description" required/>
+          <input type="text" id="description" name="description" pattern="^\S[A-Za-z ]{3,50}$" title="Only strings and max 50 characters" value="<?php echo $description; ?>" placeholder="Enter description" required/>
         </div>
 
         <div class="form-group">

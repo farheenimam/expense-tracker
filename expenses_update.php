@@ -78,12 +78,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           
         <div class="form-group">
           <label for="description">Description:</label>
-          <input type="text" id="description" name="description" pattern="^[A-Za-z ]{3,50}$" title="Only strings and max 50 characters" value="<?php echo $description; ?>" placeholder="Enter description" />
+          <input type="text" id="description" name="description" pattern="^[A-Za-z ]{3,50}$" title="Only strings and max 50 characters" value="<?php echo $description; ?>" placeholder="Enter description" required/>
         </div>
 
         <div class="form-group">
           <label for="category">Category:</label>
-          <input type="text" id="category" name="category" pattern="^\S{2,15}$"  title="Only strings and max 15 characters" value="<?php echo $category; ?>" placeholder="Enter category" />
+          <input type="text" id="category" name="category" pattern="^\S{2,15}$"  title="Only strings and max 15 characters" value="<?php echo $category; ?>" placeholder="Enter category" required/>
         </div>
 
         <div class="form-group">

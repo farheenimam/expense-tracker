@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 if (!isset($_GET['id'])){
-  header("Location: index.php");
+  header("Location: signup.php");
   exit();
 }
 $id = $_GET['i_id'];

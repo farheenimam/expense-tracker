@@ -1,76 +1,86 @@
-<?php
-include 'db.php';
-
-
-if ($_SERVER['REQUEST_METHOD'] == "POST"){
-    $name = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM users WHERE email='$email'";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0){
-         ?>
-       <script>
-        alert("Email already exists!");
-       </script>
-       <?php
-    }
-    else{
-        $sql ="INSERT INTO users(name, email, password) VALUES('$name', '$email', '$password')";
-
-        if ($conn->query($sql) === TRUE){
-            header("Location: login.php");
-            exit();
-        } else {
-          echo "Error: " . $conn->error;
-     
-        }
-    }
-
-
-    $conn->close();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Expense Tracker</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-        .auth-body {
-            padding-top: 60px;
-        }
-        .home-navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="auth-body">
-    <?php include 'navbar2.php'; ?>
+<body class="home-body">
+  <!-- Navigation -->
+  <?php include 'navbar2.php'; ?>
 
-    <div class="auth-container">
-        <h1>Create Account</h1>
-        <p>Join us by creating a new account.</p>
-        <form action="index.php" method="POST" class="auth-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" pattern="^[a-zA-Z ]{3,20}$" title="Username: 3-20 characters, letters and spaces only" placeholder="Username (3-20 characters)" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" pattern="^\S{5,50}$" title="Enter valid email" placeholder="Email" required>
-            <label for="password">Password: </label>
-            <input type="password" id="password" name="password" pattern="^\S{8,20}$" title="Password: 8-20 characters, no spaces" placeholder="Password (8-20 characters)" required>
-            <button type="submit">Sign Up</button>
-        </form>
-        <p class="auth-switch">Already have an account? <a href="login.php">Login</a></p>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <h1>Welcome to Expense Tracker</h1>
+    <p>Manage your finances with ease and track your expenses efficiently</p>
+    <div class="hero-buttons">
+      <a href="signup.php" class="hero-btn signup-btn">Sign Up</a>
+      <a href="login.php" class="hero-btn login-btn">Login</a>
     </div>
+  </section>
 
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-content">
+      <h2>About Us</h2>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="image/about.svg" alt="About Expense Tracker">
+        </div>
+        <div class="about-text">
+          <p>
+            Expense Tracker is your personal finance management solution designed to help you 
+            take control of your spending and income. Our intuitive platform makes it easy to 
+            track every transaction, categorize expenses, and gain insights into your financial habits.
+          </p>
+          <p>
+            Whether you're saving for a goal, managing a budget, or simply want to understand 
+            where your money goes, we provide the tools you need to make informed financial decisions.
+          </p>
+          <p>
+            Start your journey to financial freedom today with our simple, powerful, and secure 
+            expense tracking system.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-content">
+      <h2>Contact Us</h2>
+      <div class="contact-container">
+        <div class="contact-text">
+          <p>
+            Have questions or need support? We're here to help!
+          </p>
+          <div class="contact-info">
+            <p><strong>Email:</strong> farheenimam331@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-image">
+          <img src="image/contact.svg" alt="Contact Us">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

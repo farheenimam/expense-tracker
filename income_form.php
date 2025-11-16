@@ -4,7 +4,7 @@ include 'navbar.php';
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $id = $_GET['id'];
   if (!isset($_GET['id'])){
-  header("Location: index.php");
+  header("Location: signup.php");
   exit();
 }
 }

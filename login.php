@@ -32,7 +32,7 @@
             <input type="password" id="password" name="password" pattern="^\S{8,20}$" title="Password: 8-20 characters, no spaces" placeholder="Password (8-20 characters)" required>
             <button type="submit">Login</button>
         </form>
-        <p class="auth-switch">Don't have an account? <a href="index.php">Sign Up</a></p>
+        <p class="auth-switch">Don't have an account? <a href="signup.php">Sign Up</a></p>
     </div>
 
 </body>

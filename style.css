@@ -311,3 +311,209 @@ th {
   background: #4b5563;
 }
                                           
+/* 
+Home Page Styles */
+.home-body {
+  background: linear-gradient(135deg, #000000, rgb(45, 3, 60));
+  min-height: 100vh;
+}
+
+.home-navbar {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.home-navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.home-navbar .nav-links a:hover {
+  color: #db45f6;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px 50px;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(219, 69, 246, 0.1) 0%, transparent 60%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, rgba(139, 92, 246, 0.03) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(139, 92, 246, 0.03) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(139, 92, 246, 0.03) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(139, 92, 246, 0.03) 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+  z-index: 0;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.signup-btn:hover {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+/* Section Styles */
+section {
+  min-height: 100vh;
+  padding: 100px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-content {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.section-content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.section-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+}
+
+/* About Section */
+#about {
+  background: linear-gradient(135deg, #000000, rgb(45, 3, 60));
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.about-image {
+  flex: 0 0 300px;
+  width: 300px;
+  height: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #000000, rgb(45, 3, 60));
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contact-text {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-image {
+  flex: 0 0 300px;
+  width: 300px;
+  height: 300px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info p {
+  font-size: 20px;
+  margin: 10px 0;
+}

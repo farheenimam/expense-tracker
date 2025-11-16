@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Expense Tracker</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .auth-body {
+            padding-top: 60px;
+        }
+        .home-navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
 <body class="auth-body">
+    <?php include 'navbar2.php'; ?>
 
     <div class="auth-container">
         <h1>Welcome Back!</h1>

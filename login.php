@@ -15,7 +15,7 @@
         <form action="login.php" method="POST" class="auth-form">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" pattern="^\S{5,50}$" title="Enter valid email" placeholder="Email" required>
-            <label for="password"></label>
+            <label for="password">Password:</label>
             <input type="password" id="password" name="password" pattern="^\S{8,20}$" title="Password: 8-20 characters, no spaces" placeholder="Password (8-20 characters)" required>
             <button type="submit">Login</button>
         </form>

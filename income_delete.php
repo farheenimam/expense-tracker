@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-if (!isset($_GET['id'])){
+if (!isset($_GET['id']) || $_GET['id'] == NULL ){
   header("Location: signup.php");
   exit();
 }

@@ -4,7 +4,7 @@ include 'navbar.php';
 
 // if the request is of get then display all the records
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-  if (!isset($_GET['id'])){
+  if (!isset($_GET['id']) ||$_GET['id'] == NULL ){
   header("Location: signup.php");
   exit();
 }

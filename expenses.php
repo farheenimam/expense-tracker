@@ -42,7 +42,7 @@ $conn->close();
       <!-- Search Bar -->
       <form method="GET" action="expenses.php" class="search-form">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <input type="text" name="search" pattern="^[A-Za-z0-9 ]{3,50}$" placeholder="Search by description..." value="<?php echo $search; ?>" class="search-input">
+        <input type="text" name="search" pattern="^\S[A-Za-z0-9 ]{3,50}$" title="Enter valid! Word should be greater than 3 characters" placeholder="Search by description..." value="<?php echo $search; ?>" class="search-input">
         <button type="submit" class="search-btn">Search</button>
         
         <a href="expenses.php?id=<?php echo $id; ?>"><button type="button" class="clear-btn">Clear</button></a>

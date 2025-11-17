@@ -41,7 +41,7 @@ $conn->close();
       <!-- Search Bar -->
       <form method="GET" action="income.php" class="search-form">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <input type="text" name="search" placeholder="Search by sorce..." pattern="^[A-Za-z\s]{5, 15}$" value="<?php echo $search; ?>" class="search-input">
+        <input type="text" name="search" placeholder="Search by sorce..." pattern="^\S[A-Za-z\s]{5, 15}$" title="Enter valid! Word should be greater than 5 characters" value="<?php echo $search; ?>" class="search-input">
         <button type="submit" class="search-btn">Search</button>
         <a href="income.php?id=<?php echo $id; ?>"><button type="button" class="clear-btn">Clear</button></a>
       </form>
